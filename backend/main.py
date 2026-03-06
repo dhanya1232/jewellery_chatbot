@@ -86,6 +86,17 @@ frontend_dir = Path(__file__).resolve().parent.parent / "frontend"
 app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
 
 
+
+
+@app.get("/styles.css")
+def styles() -> FileResponse:
+    return FileResponse(frontend_dir / "styles.css")
+
+
+@app.get("/app.js")
+def app_js() -> FileResponse:
+    return FileResponse(frontend_dir / "app.js")
+
 @app.get("/")
 def root() -> FileResponse:
     return FileResponse(frontend_dir / "index.html")

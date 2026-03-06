@@ -117,10 +117,34 @@ pre {
 }
 
 #generatedImage {
-  display: none;
   margin-top: 0.6rem;
   max-width: 100%;
   border-radius: 10px;
+}
+
+.status-banner {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.status-banner.ok {
+  background: #ecfff4;
+  color: #166c43;
+  border: 1px solid #b7ebce;
+}
+
+.status-banner.warn {
+  background: #fff8e9;
+  color: #815d10;
+  border: 1px solid #f2ddb0;
+}
+
+.status-banner.error {
+  background: #ffeef0;
+  color: #8a2031;
+  border: 1px solid #f2c2ca;
 }
 
 .note { min-height: 1rem; }

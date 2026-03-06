@@ -34,3 +34,7 @@ Open: `http://localhost:8000`
 - `POST /api/chat`
 - `POST /api/image-to-text`
 - `POST /api/text-to-image`
+
+## Troubleshooting
+- If the page looks plain/unstyled or chat doesn't answer, you are likely opening HTML directly or from a different server.
+- Always run FastAPI and open `http://localhost:8000` so the UI can reach `/api/*` and static assets correctly.
