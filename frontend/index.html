@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewellery Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="side">
+        <h1>💍 Jewellery Bot</h1>
+        <p>Your AI stylist for rings, necklaces, gemstones, and gift ideas.</p>
+
+        <section class="toolbox">
+          <h2>Image → Text</h2>
+          <input id="imageInput" type="file" accept="image/*" />
+          <button id="imageBtn">Describe Jewellery</button>
+          <pre id="imageOutput"></pre>
+        </section>
+
+        <section class="toolbox">
+          <h2>Text → Image</h2>
+          <textarea id="promptInput" placeholder="A diamond pendant in rose-gold, luxury product photo"></textarea>
+          <button id="generateBtn">Generate Image</button>
+          <p id="imageNote" class="note"></p>
+          <img id="generatedImage" alt="Generated jewellery concept" />
+        </section>
+      </aside>
+
+      <section class="chat-panel">
+        <header>Chat Assistant</header>
+        <div id="chatMessages" class="chat-messages">
+          <div class="message bot">Hi! Ask me anything about jewellery styles, gemstones, and budgets.</div>
+        </div>
+        <div class="chat-input-row">
+          <textarea id="chatInput" placeholder="Type your message..."></textarea>
+          <button id="chatBtn">Send</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

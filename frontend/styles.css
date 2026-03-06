@@ -1,0 +1,136 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f3effa;
+  color: #2a1f3d;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1rem;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.side {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem;
+  overflow-y: auto;
+  box-shadow: 0 4px 18px rgba(61, 32, 120, 0.12);
+}
+
+.toolbox {
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #ece2fa;
+}
+
+.chat-panel {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(61, 32, 120, 0.12);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 0;
+}
+
+.chat-panel header {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #ece2fa;
+  font-weight: 700;
+}
+
+.chat-messages {
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.message {
+  padding: 0.65rem 0.8rem;
+  border-radius: 12px;
+  max-width: 78%;
+  white-space: pre-wrap;
+}
+
+.message.bot {
+  background: #f1ebff;
+  align-self: flex-start;
+}
+
+.message.user {
+  background: #6b3fd8;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chat-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  padding: 0.9rem;
+  border-top: 1px solid #ece2fa;
+}
+
+textarea,
+input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#chatInput {
+  min-height: 54px;
+  max-height: 120px;
+}
+
+textarea {
+  border: 1px solid #d9caef;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+button {
+  background: #6b3fd8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.95rem;
+  cursor: pointer;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: #f8f5ff;
+  border-radius: 8px;
+  padding: 0.7rem;
+  min-height: 42px;
+}
+
+#generatedImage {
+  display: none;
+  margin-top: 0.6rem;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.note { min-height: 1rem; }
+
+@media (max-width: 980px) {
+  .app {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .chat-panel {
+    min-height: 65vh;
+  }
+}
